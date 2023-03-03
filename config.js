@@ -11,16 +11,16 @@ const CONFIG = {
 	// └─┘┴ ┴└─┘┴└─┘└─┘
 
 	// General
-	name: 'Daniel',
+	name: 'Daniel-kun',
 	imageBackground: false,
 	openInNewTab: true,
 	twelveHourFormat: false,
 
 	// Greetings
-	greetingMorning: 'Good morning!',
-	greetingAfternoon: 'Good afternoon,',
-	greetingEvening: 'Good evening,',
-	greetingNight: 'Go to Sleep!',
+	greetingMorning: 'Ohayou!',
+	greetingAfternoon: 'Konnichiwa,',
+	greetingEvening: 'Konbanwa,',
+	greetingNight: 'Oyasumi!',
 
 	// Layout
 	bentoLayout: 'bento', // 'bento', 'lists', 'buttons'
