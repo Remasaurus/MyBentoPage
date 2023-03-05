@@ -6,48 +6,63 @@
 
 /* V A R I A B L E S */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap'); /* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+/* Font Import */
 
 :root {
   /* Font Size */
-  --fg-primary: 12vh; /* Time and Greetings */
-  --fg-secondary: 3vh; /* Greetings and Weather widger */
-  --fg-date: 8vh; /* Date */
-  --fg-list: 2vh; /* Links List */
-  --icon: 3vh; /* Icon Size */
+  --fg-primary: 12vh;
+  /* Time and Greetings */
+  --fg-secondary: 3vh;
+  /* Greetings and Weather widger */
+  --fg-date: 8vh;
+  /* Date */
+  --fg-list: 2vh;
+  /* Links List */
+  --icon: 3vh;
+  /* Icon Size */
 
   /* Fonts Color */
-  --fg: #3a3a3a; /* Foreground color */
-  --sfg: #494949; /* Sceondary Foreground color */
+  --fg: #3a3a3a;
+  /* Foreground color */
+  --sfg: #494949;
+  /* Sceondary Foreground color */
 
   /* Light Colors  */
-  --accent: #57a0d9; /* Hover color */
-  --background: #f5f5f5; /* Background color */
-  --cards: #e4e6e6; /* Cards color */
+  --accent: #57a0d9;
+  /* Hover color */
+  --background: #f5f5f5;
+  /* Background color */
+  --cards: #e4e6e6;
+  /* Cards color */
 
   /* Image background  */
-  --imgbg: url(assets/background.jpg); /* Image URL */
-  --imgcol: linear-gradient(
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.7)
-  ); /* Filter color */
+  --imgbg: url(assets/background.jpg);
+  /* Image URL */
+  --imgcol: linear-gradient(rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7));
+  /* Filter color */
 }
 
 .darktheme {
   /* Dark Colors  */
-  --accent: #57a0d9; /* Hover color */
-  --background: #19171a; /* Background color */
-  --cards: #201e21; /* Cards color */
+  --accent: #57a0d9;
+  /* Hover color */
+  --background: #19171a;
+  /* Background color */
+  --cards: #201e21;
+  /* Cards color */
 
   /* Fonts Color */
-  --fg: #d8dee9; /* Foreground color */
-  --sfg: #2c292e; /* Secondary Foreground color */
+  --fg: #d8dee9;
+  /* Foreground color */
+  --sfg: #2c292e;
+  /* Secondary Foreground color */
 
   /* Image background  */
-  --imgcol: linear-gradient(
-    rgba(0, 0, 0, 0.85),
-    rgba(0, 0, 0, 0.85)
-  ); /* Filter color */
+  --imgcol: linear-gradient(rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.85));
+  /* Filter color */
 }
 
 /* S T Y L E S */
@@ -58,6 +73,7 @@
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   transition: 0.2s ease-in-out;
+  /* outline: auto 10px rgba(0, 255, 55, 1); */
 }
 
 body {
@@ -118,16 +134,18 @@ body {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
 }
 
-.timeBlock {
+
+.greetingBlock {
   grid-row: 1 / span 2;
   grid-column: 1 / span 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: calc(100% + 45px);
 }
 
-.weatherBlock {
+.timeBlock {
   grid-column: 3 / span 2;
   grid-row: 1 / span 2;
   display: flex;
@@ -177,6 +195,20 @@ body {
 #greetings {
   font-size: var(--fg-secondary);
   color: var(--fg);
+}
+
+#greetingImage {
+  /* flex-shrink: 0; */
+  background:
+    url("assets/catgirl.png") no-repeat center center;
+
+  margin-top: -3%;
+  left: 0;
+  position: relative;
+  width: 100%;
+  height: 90%;
+  /* background-color: #201e21; */
+  background-size: contain;
 }
 
 .weatherIcon img {
@@ -251,29 +283,36 @@ body {
   grid-row: 1;
   grid-column: 1;
 }
+
 .button__2 {
   grid-row: 1;
   grid-column: 2;
 }
+
 .button__3 {
   grid-row: 2;
   grid-column: 1;
 }
+
 .button__4 {
   grid-row: 2;
   grid-column: 2;
 }
+
 .button__5 {
   grid-row: 1;
   grid-column: 3;
 }
+
 .button__6 {
   grid-row: 2;
   grid-column: 3;
 }
+
 .button:hover {
   background-color: var(--accent);
 }
+
 .button:hover svg {
   stroke: var(--sfg);
 }
@@ -299,10 +338,12 @@ body {
   grid-column: 1;
   grid-row: 1 / span 2;
 }
+
 .list__2 {
   grid-column: 2;
   grid-row: 1 / span 2;
 }
+
 .listIcon {
   /* margin-top: 3vh; */
   margin-bottom: 2vh;
@@ -310,6 +351,7 @@ body {
   width: var(--icon);
   height: var(--icon);
 }
+
 .listItem {
   text-decoration: none;
   font-size: var(--fg-list);
@@ -321,10 +363,75 @@ body {
   text-align: center;
   width: 80%;
 }
+
 .listItem:hover {
   background-color: var(--accent);
   color: var(--sfg);
 }
+
+
+:root {
+  --speechheight: auto;
+  --speechwidth: auto;
+  --speechfg: rgb(52, 50, 53);
+  --speechbg: rgb(32, 30, 32);
+
+  --bubbley: -50%;
+}
+
+.speechBubble {
+  animation: floatsmall 5s ease-in-out infinite;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 15px;
+  height: var(--speechheight);
+  width: var(--speechwidth);
+  background-color: var(--speechfg);
+  padding: 50px;
+  border-radius: 11px;
+  position: relative;
+  box-shadow: 0.8rem 0.8rem var(--speechbg);
+  font-style: italic;
+}
+
+:root {
+  --bubbleheight: 1rem;
+  --bubblewidth: 30%;
+  --bubblesize: 5rem;
+  --bubblefg: var(--speechfg);
+  --bubblebk: var(--speechbg);
+  --bubbleleft: 40%;
+}
+
+
+.speechBubble:after {
+  content: ".";
+  animation: float2small 5s ease-in-out infinite;
+  font-weight: bold;
+  line-height: 30px;
+
+  width: var(--bubblewidth);
+  height: var(--bubbleheight);
+  background-color: var(--bubblefg);
+  box-shadow: 0.5rem 0.5rem var(--bubblebk);
+
+  text-align: left;
+  font-size: var(--bubblesize);
+  color: var(--bubblefg);
+  text-shadow: 0.5rem 0.5rem var(--bubblebk);
+  position: absolute;
+  border-radius: 11px;
+  display: block;
+  /* bottom: -35%; */
+  bottom: calc(30% - var(--bubbleheight) + var(--bubbley));
+  left: var(--bubbleleft);
+
+  z-index: -2;
+}
+
+
 
 /* M E D I A - Q U E R I E S */
 
@@ -334,12 +441,14 @@ body {
     padding: 40px;
   }
 
-  .timeBlock {
+  .greetingBlock {
     grid-row: 1 / span 2;
     grid-column: 1 / span 4;
+    height: calc(100% + 40px);
   }
 
-  .weatherBlock {
+
+  .timeBlock {
     display: none;
   }
 
@@ -359,5 +468,99 @@ body {
     grid-gap: 3vw;
     padding-left: 100px;
     padding-right: 100px;
+  }
+
+   
+  .speechBubble {
+    animation: floatsmall 5s ease-in-out infinite;
+  }
+
+  .speechBubble:after {
+    animation: float2small 5s ease-in-out infinite;
+  }
+}
+
+/* K E Y - F R A M E S */
+:root {
+  --floatstartsmall: -20px;
+  --floatoffsetsmall: 00px;
+
+  --float2startsmall: -18px;
+  --float2offsetsmall: -5px;
+}
+
+@keyframes floatsmall {
+  0% {
+    transform: translatey(calc(var(--bubbley) + var(--floatstartsmall)));
+  }
+
+  50% {
+    transform: translatey(calc(var(--bubbley) + var(--floatoffsetsmall)));
+  }
+
+  100% {
+    transform: translatey(calc(var(--bubbley) + var(--floatstartsmall)));
+  }
+}
+
+@keyframes float2small {
+  0% {
+    line-height: 30px;
+    transform: translatey(calc(var(--bubbley) + var(--float2startsmall)));
+  }
+
+  55% {
+    transform: translatey(calc(var(--bubbley) + var(--float2offsetsmall)));
+  }
+
+  60% {
+    line-height: 10px;
+  }
+
+  100% {
+    line-height: 30px;
+    transform: translatey(calc(var(--bubbley) + var(--float2startsmall)));
+  }
+}
+
+:root {
+  --floatstartbig: 0px;
+  --floatoffsetbig: 10px;
+
+  --float2startbig: -15px;
+  --float2offsetbig: -5px;
+}
+
+@keyframes floatbig {
+  0% {
+    transform: translatey(calc(var(--bubbley) + var(--floatstartbig)));
+  }
+
+  50% {
+    transform: translatey(calc(var(--bubbley) + var(--floatoffsetbig)));
+  }
+
+  100% {
+    transform: translatey(calc(var(--bubbley) + var(--floatstartbig)));
+  }
+}
+
+@keyframes float2big {
+  0% {
+    line-height: 30px;
+    transform: translatey(calc(var(--bubbley) + var(--float2startbig)));
+  }
+
+  55% {
+    transform: translatey(calc(var(--bubbley) + var(--float2offsetbig)));
+  }
+
+  60% {
+    line-height: 10px;
+  }
+
+  100% {
+    line-height: 30px;
+    transform: translatey(calc(var(--bubbley) + var(--float2startbig)));
   }
 }

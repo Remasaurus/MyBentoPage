@@ -18,7 +18,7 @@ const CONFIG = {
 
 	// Greetings
 	greetingMorning: 'Ohayou!',
-	greetingAfternoon: 'Konnichiwa,',
+	greetingAfternoon: 'Konnichi wa,',
 	greetingEvening: 'Konbanwa,',
 	greetingNight: 'Oyasumi!',
 
