@@ -120,24 +120,24 @@ const CONFIG = {
 			],
 		},
 		{
-			icon: 'binary',
+			icon: 'graduation-cap',
 			id: '2',
 			links: [
 				{
-					name: 'Github',
-					link: 'https://www.github.com/',
+					name: 'Office',
+					link: 'https://www.office.com/?auth=2',
 				},
 				{
-					name: 'StackOverflow',
-					link: 'https://stackoverflow.com/',
+					name: 'Magister',
+					link: 'https://hageveld.magister.net/magister/',
 				},
 				{
-					name: 'CppReference',
-					link: 'https://en.cppreference.com/',
+					name: 'Outlook',
+					link: 'https://outlook.office.com/mail/',
 				},
 				{
-					name: '',
-					link: '',
+					name: 'Chess',
+					link: 'https://www.chess.com/',
 				},
 			]
 		}
